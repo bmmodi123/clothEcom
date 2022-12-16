@@ -23,10 +23,12 @@ const Navigation = () => {
           <CrwnLogo className='logo' />
         </Link>
         <div className='nav-links-container'>
+          <span className='nav-link'>
+            { currentUser && currentUser.email !== null && <span>Signed In As: {currentUser.email}</span> }
+          </span>
           <Link className='nav-link' to='/shop'>
             SHOP
           </Link>
-
           {currentUser ? (
             <span className='nav-link' onClick={signOutUser}>
               SIGN OUT
