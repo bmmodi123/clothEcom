@@ -43,9 +43,9 @@ export const UserProvider = ({ children }) => {
     dispatch({type: USER_ACTION_TYPES.SET_CURRENT_USER, payload: user});
   }
 
-  
   const { currentUser } = state;
   const value = { currentUser, setCurrentUser };
+  
   useEffect(() => {
     const unsubscribe = onAuthStateChangedListener((user) => {
       if (user) {
