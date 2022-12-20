@@ -5,7 +5,8 @@ import { createSelector } from 'reselect';
 const selectCategoryReducer = (state) => state.categories;
 
 export const selectCategories = createSelector( 
-    [selectCategoryReducer], (categoriesReducer) => categoriesReducer.categoriesArray
+    [selectCategoryReducer], 
+    (categoriesReducer) => categoriesReducer.categoriesArray
 );  
 
 //generating category map from categoryArray Data using createSelector for caching
