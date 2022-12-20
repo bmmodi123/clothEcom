@@ -1,5 +1,5 @@
 import { useDispatch, useSelector } from 'react-redux';
-import { selectCartItems, selectCartTotal } from '../../store/cart/cart-selector'
+import { selectCartItems } from '../../store/cart/cart-selector'
 import { addItemToCart , removeItemFromCart ,clearItemFromCart} from '../../store/cart/cart-action'
 
 import './checkout-item.styles.scss';
