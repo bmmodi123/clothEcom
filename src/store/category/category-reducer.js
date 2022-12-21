@@ -21,6 +21,7 @@ export const categoriesReducer = (state = InitialState, action={}) => {
             return {
                 ...state, // keep the existing state and then override the currentUser
                 categoriesArray: payload,
+                isLoading: false,
             };
 
         case CATEGORIES_ACTION_TYPES.FETCH_CATEGORIES_FAILED:

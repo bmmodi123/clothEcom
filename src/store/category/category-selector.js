@@ -7,7 +7,12 @@ const selectCategoryReducer = (state) => state.categories;
 export const selectCategories = createSelector( 
     [selectCategoryReducer], 
     (categoriesReducer) => categoriesReducer.categoriesArray
-);  
+);
+
+export const selectCategoriesIsLoading = createSelector( 
+    [selectCategoryReducer], 
+    (categoriesReducer) => categoriesReducer.isLoading
+); 
 
 //generating category map from categoryArray Data using createSelector for caching
 export const selectCategoriesMap = createSelector(
@@ -32,3 +37,6 @@ export const selectCategoriesMap = createSelector(
 //         acc[title.toLowerCase()] = items;
 //         return acc;
 //     }, {});
+
+
+
