@@ -11,7 +11,7 @@ export const CategoriesContext = createContext({
 export const CategoriesProvider = ({ children }) => {
   const [categoriesMap, setCategoriesMap] = useState({});
 
-  // code to add sho data in firebase store.
+  // code to add shop data in firebase store.
   useEffect(() => {
     addCollectionAndDocuments('categories', SHOP_DATA);
   }, []);
